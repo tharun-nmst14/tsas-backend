@@ -21,7 +21,12 @@ app.get("/", (req, res) => {
 // Notice Routes
 app.use("/api/notices", require("./routes/noticeRoutes"));
 
+// Announcement Routes
 app.use("/api/announcements", require("./routes/announcementRoutes"));
+
+// ⭐ Important Links Routes (NEW)
+app.use("/api/important-links", require("./routes/importantLinks"));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
